@@ -17,9 +17,9 @@
 </div>
 <div class="nav">
 <ul>
-    <li[% IF page == 'index' %] class="active"[% END %]><a href="index.html">about me</a></li>
+    <li[% IF page == 'index' %] class="active"[% END %]><a href="index.html">about</a></li>
     <li[% IF page == 'work' %] class="active"[% END %]><a href="work.html">work</a></li>
-    <li[% IF page == 'profiles' %] class="active"[% END %]><a href="profiles.html">me elsewhere</a></li>
+    <li[% IF page == 'profiles' %] class="active"[% END %]><a href="profiles.html">internet</a></li>
     <li[% IF page == 'talks' %] class="active"[% END %]><a href="talks.html">talks</a></li>
     <li[% IF page == 'communities' %] class="active"[% END %]><a href="communities.html">communities</a></li>
     <li[% IF page == 'contact' %] class="active"[% END %]><a href="contact.html">contact</a></li>
