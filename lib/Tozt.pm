@@ -7,6 +7,8 @@ use File::Copy::Recursive qw(rcopy);
 use Path::Class ();
 use Template;
 
+with 'MooseX::Getopt';
+
 has output_dir => (
     is      => 'ro',
     isa     => Dir,
@@ -29,10 +31,12 @@ has static_dir => (
 );
 
 has templater => (
-    is      => 'ro',
-    isa     => 'Template',
-    lazy    => 1,
-    default => sub {
+    traits   => ['NoGetopt'],
+    is       => 'ro',
+    isa      => 'Template',
+    lazy     => 1,
+    init_arg => undef,
+    default  => sub {
         Template->new(
             INCLUDE_PATH => shift->template_dir,
         );

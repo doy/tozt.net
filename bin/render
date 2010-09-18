@@ -5,6 +5,6 @@ use lib 'lib';
 
 use Tozt;
 
-my $site = Tozt->new;
+my $site = Tozt->new_with_options;
 $site->render_all;
 $site->update_static;
