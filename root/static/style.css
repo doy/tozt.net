@@ -88,3 +88,26 @@ a:visited {
     margin           : 8px;
     padding          : 2px;
 }
+
+.main_content table {
+    border-collapse : collapse;
+    font-size       : small;
+    width           : 100%;
+}
+
+.main_content thead {
+    background-color : #58a;
+    border-style     : solid;
+    border-width     : 1px;
+    font-weight      : bold;
+}
+
+.main_content th {
+    border-style : solid solid none none;
+    border-width : 1px;
+}
+
+.main_content td {
+    border-style : solid none none solid;
+    border-width : 1px;
+}
