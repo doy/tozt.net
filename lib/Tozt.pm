@@ -80,7 +80,7 @@ sub render_all {
 sub update_static {
     my $self = shift;
     for my $file ($self->static_dir->children) {
-        rcopy($file, $self->output_dir);
+        rcopy($file, $self->output_dir->stringify);
     }
 }
 
