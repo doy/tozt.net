@@ -64,18 +64,16 @@ a:visited {
 
 .nav li a:link {
     text-decoration: none;
+    color: black;
 }
 
 .nav li a:visited {
     text-decoration: none;
+    color: black;
 }
 
 .nav li.active {
     background-color: #58a;
-}
-
-.nav li.active a:visited {
-    color: #040;
 }
 
 .main_content {
