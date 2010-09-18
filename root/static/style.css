@@ -44,14 +44,6 @@ a:visited {
     text-align: center;
 }
 
-.nav a:link {
-    text-decoration: none;
-}
-
-.nav a:visited {
-    text-decoration: none;
-}
-
 .nav ul {
     font-weight: bold;
     font-size: small;
@@ -65,20 +57,38 @@ a:visited {
     display: inline;
     padding: 2px;
     padding-bottom: 0px;
+    position: relative;
+    bottom: -4px;
+}
+
+.nav li a:link {
+    text-decoration: none;
+}
+
+.nav li a:visited {
+    text-decoration: none;
+}
+
+.nav li.active {
+    background-color: #58a;
+}
+
+.nav li.active a:visited {
+    color: #040;
 }
 
 .main_content {
     background-color: #8c8;
     border: 1px solid;
-    padding: 5px;
+    padding: 8px;
+    padding-bottom: 16px;
+}
+
+.main_content h4 {
+    margin: 8px;
 }
 
 .main_content > div {
     border-bottom: 1px dotted;
     padding-bottom: 16px;
-}
-
-.main_content #contact {
-    border-bottom: 0px;
-    padding-bottom: 0px;
 }
