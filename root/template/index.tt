@@ -1,9 +1,7 @@
 <h4>about me</h4>
-<ul>
-<li>I am a programmer working for <a href="http://iinteractive.com">Infinity Interactive</a>, mostly doing web development in Perl.</li>
-<li>I graduated from <a href="http://uiuc.edu/">the University of Illinois at Urbana-Champaign</a> in 2008, with a degree in computer science.</li>
-<li>I'm currently living in Somerville, MA, but I enjoy driving all over the place (and <a href="http://www.couchsurfing.org/people/doy/">meeting new people when I do so</a>).</li>
-<li>In my free time, I enjoy <a href="http://www.archwayskydiving.com/">skydiving</a>, playing (and writing code for) <a href="http://crawl.develz.org">Crawl</a>, and pretending I know how to cook.</li>
-<li>I'm pretty obsessive about configuring things - if you're looking for example configuration files for various applications, you can see my dotfiles <a href="http://github.com/doy/conf">here</a>.</li>
-<li>I listen to <a href="http://last.fm/user/doyster">a ton of music</a>, and I'm always interested in new recommendations.</li>
-</ul>
+<p>I am a programmer working for <a href="http://iinteractive.com">Infinity Interactive</a>, mostly doing web development in Perl.</p>
+<p>I graduated from <a href="http://uiuc.edu/">the University of Illinois at Urbana-Champaign</a> in 2008, with a degree in computer science.</p>
+<p>I'm currently living in Somerville, MA, but I enjoy driving all over the place (and <a href="http://www.couchsurfing.org/people/doy/">meeting new people when I do so</a>).</p>
+<p>In my free time, I enjoy <a href="http://www.archwayskydiving.com/">skydiving</a>, playing (and writing code for) <a href="http://crawl.develz.org">Crawl</a>, and pretending I know how to cook.</p>
+<p>I'm pretty obsessive about configuring things - if you're looking for example configuration files for various applications, you can see my dotfiles <a href="http://github.com/doy/conf">here</a>.</p>
+<p>I listen to <a href="http://last.fm/user/doyster">a ton of music</a>, and I'm always interested in new recommendations.</p>
