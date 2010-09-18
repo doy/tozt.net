@@ -1,0 +1,84 @@
+body {
+    background-color: #345;
+    font-family: sans;
+    margin: 0 auto;
+    width: 600px;
+}
+
+a:link {
+    color: #123;
+}
+
+a:visited {
+    color: #153;
+}
+
+.header {
+    border-bottom: 1px solid;
+    position: relative;
+}
+
+.header .name {
+    float: left;
+    margin-top: 0px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.header .name h1 {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.gravatar {
+    float: right;
+    vertical-align: bottom;
+}
+
+.clear {
+    clear: both;
+}
+
+.nav {
+    text-align: center;
+}
+
+.nav a:link {
+    text-decoration: none;
+}
+
+.nav a:visited {
+    text-decoration: none;
+}
+
+.nav ul {
+    font-weight: bold;
+    font-size: small;
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+
+.nav li {
+    background-color: #8c8;
+    border: 1px solid black;
+    display: inline;
+    padding: 2px;
+    padding-bottom: 0px;
+}
+
+.main_content {
+    background-color: #8c8;
+    border: 1px solid;
+    padding: 5px;
+}
+
+.main_content > div {
+    border-bottom: 1px dotted;
+    padding-bottom: 16px;
+}
+
+.main_content #contact {
+    border-bottom: 0px;
+    padding-bottom: 0px;
+}

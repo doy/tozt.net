@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="openid.server" href="http://www.livejournal.com/openid/server.bml" />
+    <link rel="openid.delegate" href="http://doyster.livejournal.com/" />
+    <title>Jesse Luehrs</title>
+</head>
+<body>
+<div class="header">
+    <div>
+    <div class="name"><h1>Jesse Luehrs</h1></div>
+    <img src="http://www.gravatar.com/avatar/dd9aceaf17982bc33972b3bb8701cd19.jpg" alt="gravatar" class="gravatar" />
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="nav">
+<ul>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#profiles">Me elsewhere</a></li>
+    <li><a href="#talks">Talks</a></li>
+    <li><a href="#communities">Communities</a></li>
+    <li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+<div class="main_content">
+[% content %]
+</div>
+</body>
+</html>

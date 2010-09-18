@@ -1,0 +1,30 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+
+use Plack::App::Directory;
+use Plack::Builder;
+use Plack::Request;
+use Plack::Response;
+use Plack::Runner;
+
+my $site_root = 'site';
+my $dir_app = Plack::App::Directory->new(root => $site_root)->to_app;
+my $app = sub {
+    my ($env) = @_;
+    my $req = Plack::Request->new($env);
+    if (-d ("$site_root" . $req->path)) {
+        my $resp = Plack::Response->new(302);
+        my $path = $req->path;
+        $path .= '/' unless $path =~ m:/$:;
+        $resp->location("${path}index.html");
+        return $resp->finalize;
+    }
+    else {
+        return $dir_app->($env);
+    }
+};
+
+my $runner = Plack::Runner->new;
+$runner->parse_options(@ARGV);
+$runner->run($app);
