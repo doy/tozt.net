@@ -1,12 +1,18 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
+use lib 'lib';
 
 use Plack::App::Directory;
 use Plack::Builder;
 use Plack::Request;
 use Plack::Response;
 use Plack::Runner;
+use Tozt;
+
+my $site = Tozt->new;
+$site->render_all;
+$site->update_static;
 
 my $site_root = 'site';
 my $dir_app = Plack::App::Directory->new(root => $site_root)->to_app;
