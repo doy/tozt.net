@@ -1,9 +1,9 @@
 package Tozt;
 use Moose;
-use MooseX::Types::Path::Class qw(Dir);
 use namespace::autoclean;
 
 use File::Copy::Recursive qw(rcopy);
+use MooseX::Types::Path::Class qw(Dir);
 use Path::Class ();
 use Template;
 
@@ -85,6 +85,5 @@ sub update_static {
 }
 
 __PACKAGE__->meta->make_immutable;
-no Moose;
 
 1;
