@@ -17,7 +17,9 @@ var GithubActivity = (function($, _) {
             <% if (type == "PushEvent") { %> \
                 <a href="<%= url %>"><b>pushed</b></a> \
                 to <a href="<%= repository.url %><% if (payload.ref != "refs/heads/master") { print("/tree/"); print(payload.ref.replace("refs/heads/", "")); } %>"> \
-                <%= repository.name %>/<% print(payload.ref.replace("refs/heads/", "")); %></a> \
+                <% print(payload.ref.replace("refs/heads/", "")); %></a> \
+                at <a href="<%= repository.url %>"> \
+                <%= repository.owner %>/<%= repository.name %></a> \
                 <dl><% _.each(payload.shas, function(sha) { %> \
                     <dt> \
                     <a href="<%= repository.url %>/commit/<%= sha[0] %>"> \
@@ -33,12 +35,15 @@ var GithubActivity = (function($, _) {
             <% } else if (type == "PullRequestEvent") { %> \
                 <b><%= payload.action %> pull request</b> \
                 <a href="<%= payload.pull_request.html_url %>"> \
-                #<%= payload.number %>: <%= payload.pull_request.title %></a> \
+                #<%= payload.number %></a> for \
+                <a href="<%= repository.url %>"> \
+                <%= repository.owner %>/<%= repository.name %></a>: \
+                <%= payload.pull_request.title %></a> \
             <% } else if (type == "IssueCommentEvent") { %> \
                 <b>commented on issue</b> <a href="<%= url %>"> \
                 #<% print(url.replace(/.*\\/issues\\/(\\d+)#.*/, "$1")); %> \
-                </a> in \
-                <a href="<%= repository.url%>"><%= repository.name %></a> \
+                </a> in <a href="<%= repository.url%>"> \
+                <%= repository.owner %>/<%= repository.name %></a> \
             <% } else { %> \
                 Unknown event type <% type %> \
             <% } %>\
