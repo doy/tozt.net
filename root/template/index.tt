@@ -1,6 +1,10 @@
-<div class="github">
-<h4>my <a href="https://github.com/doy">github</a> activity</h2>
-<ul id="github-activity"></ul>
+<div class="github sidebar">
+<h4>my <a href="https://github.com/doy">github</a> activity</h4>
+<ul id="github-activity" class="sidebar-activity"></ul>
+</div>
+<div class="pinboard sidebar">
+<h4>my <a href="https://pinboard.in/u:doy">pinboard</a> links</h4>
+<ul id="pinboard-activity" class="sidebar-activity"></ul>
 </div>
 <h4>about me</h4>
 <p>I am a programmer working for <a href="http://iinteractive.com">Infinity Interactive</a>, mostly doing web development in Perl.</p>
@@ -15,8 +19,10 @@
 <script src="jquery-1.8.2.min.js"></script>
 <script src="underscore-min.js"></script>
 <script src="github_activity.js"></script>
+<script src="pinboard_activity.js"></script>
 <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
         GithubActivity.show_activity('doy', '#github-activity');
+        PinboardActivity.show_activity('doy', '#pinboard-activity');
     });
 </script>
