@@ -80,14 +80,14 @@ a:visited {
 .main_content {
     background-color : #8c8;
     border           : 1px solid;
-    padding          : 8px;
+    padding          : 16px;
     position         : relative;
 }
 
 .main_content h4 {
     background-color : #58a;
     border           : 1px solid;
-    margin           : 8px;
+    margin           : 0px;
     padding          : 2px;
 }
 
