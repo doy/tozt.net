@@ -1,3 +1,7 @@
+<div class="github">
+<h4>My GitHub activity</h2>
+<ul id="github-activity"></ul>
+</div>
 <h4>about me</h4>
 <p>I am a programmer working for <a href="http://iinteractive.com">Infinity Interactive</a>, mostly doing web development in Perl.</p>
 <p>I typically go by "<a href="profiles.html">doy</a>" on the internet.</p>
@@ -8,3 +12,11 @@
 <p>I'm pretty obsessive about configuring things - if you're looking for example configuration files for various applications, you can see my dotfiles <a href="http://github.com/doy/conf">here</a>.</p>
 <p>I listen to <a href="http://last.fm/user/doyster">a ton of music</a>, and I'm always interested in new recommendations.</p>
 <p>If you're interested in buying me things, I have a wishlist <a href="http://www.amazon.com/wishlist/239JPJSGMBVDC/">here</a>.</p>
+<script src="jquery-1.8.2.min.js"></script>
+<script src="underscore-min.js"></script>
+<script src="github_activity.js"></script>
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+        GithubActivity.show_activity('doy', '#github-activity');
+    });
+</script>

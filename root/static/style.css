@@ -60,6 +60,7 @@ a:visited {
     padding          : 2px;
     padding-bottom   : 0px;
     position         : relative;
+    z-index          : 1;
 }
 
 .nav li a:link {
@@ -80,6 +81,7 @@ a:visited {
     background-color : #8c8;
     border           : 1px solid;
     padding          : 8px;
+    position         : relative;
 }
 
 .main_content h4 {
@@ -110,4 +112,28 @@ a:visited {
 .main_content td {
     border-style : solid none none solid;
     border-width : 1px;
+}
+
+.github {
+    width : 250px;
+    font-size : x-small;
+    background-color : #8c8;
+    border-style : solid;
+    border-width : 1px;
+    padding : 8px;
+    position : absolute;
+    left : -274px;
+    margin-top : 8px;
+}
+
+.github h4 {
+    background-color : #58a;
+    border           : 1px solid;
+    margin           : 0px;
+    padding          : 2px;
+    font-size        : medium;
+}
+
+.github ul {
+    padding : 0px 16px;
 }
