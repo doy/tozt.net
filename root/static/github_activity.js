@@ -13,42 +13,34 @@ var GithubActivity = (function($, _) {
     var
         self = {},
         gh = 'http://github.com/',
-        default_template = '<li> \
+        default_template = '<li class="action"> \
             <% if (type == "PushEvent") { %> \
-                <a href="https://github.com/<%= actor %>"><%= actor %></a> \
-                <a href="<%= url %>">pushed</a> \
-                to <a href="<%= repository.url %>"> \
-                <%= repository.name %></a> on \
-                <% print(created_at.substring(0, 10)); %>. \
-                <ul><% _.each(payload.shas, function(sha) { %> \
-                    <li> \
+                <a href="<%= url %>"><b>pushed</b></a> \
+                to <a href="<%= repository.url %><% if (payload.ref != "refs/heads/master") { print("/tree/"); print(payload.ref.replace("refs/heads/", "")); } %>"> \
+                <%= repository.name %>/<% print(payload.ref.replace("refs/heads/", "")); %></a> \
+                <dl><% _.each(payload.shas, function(sha) { %> \
+                    <dt> \
                     <a href="<%= repository.url %>/commit/<%= sha[0] %>"> \
-                    <%= sha[0].substring(0,6) %></a> \
-                    <%= (sha[2].split("\\n"))[0] %><% }); %></li></ul>\
+                    <%= sha[0].substring(0,6) %></a></dt> \
+                    <dd><%= (sha[2].split("\\n"))[0] %></dd><% }); %></dl>\
             <% } else if (type == "GistEvent") { %> \
-                <a href="https://github.com/<%= actor %>"><%= actor %></a> \
-                <%= payload.action %>d gist: <a href="<%= payload.url %>">\
-                <%= payload.desc %></a>.\
+                <b><%= payload.action %>d gist</b>: \
+                <a href="<%= payload.url %>"><%= payload.desc %></a> \
             <% } else if (type == "CreateEvent") { %> \
-                <a href="https://github.com/<%= actor %>"><%= actor %></a> \
-                created <%= payload.ref_type %> <a href="<%= url %>"> \
+                <b>created <%= payload.ref_type %></b> <a href="<%= url %>"> \
                 <%= payload.ref %></a> in <a href="<%= repository.url %>"> \
-                <%= repository.name %></a> on \
-                <% print(created_at.substring(0, 10)); %>. \
+                <%= repository.name %></a> \
             <% } else if (type == "PullRequestEvent") { %> \
-                <a href="https://github.com/<%= actor %>"><%= actor %></a> \
-                <%= payload.action %> pull request \
+                <b><%= payload.action %> pull request</b> \
                 <a href="<%= payload.pull_request.html_url %>"> \
                 #<%= payload.number %>: <%= payload.pull_request.title %></a> \
-                on <% print(created_at.substring(0, 10)); %>. \
             <% } else if (type == "IssueCommentEvent") { %> \
-                <a href="https://github.com/<%= actor %>"><%= actor %></a> \
-                commented on issue <a href="<%= url %>"> \
+                <b>commented on issue</b> <a href="<%= url %>"> \
                 #<% print(url.replace(/.*\\/issues\\/(\\d+)#.*/, "$1")); %> \
-                </a> in <a href="<%= repository.url%>"><%= repository.name %> \
-                </a> on <% print(created_at.substring(0, 10)); %>. \
+                </a> in \
+                <a href="<%= repository.url%>"><%= repository.name %></a> \
             <% } else { %> \
-                Unknown event type <% type %>. \
+                Unknown event type <% type %> \
             <% } %>\
             </li>';               
 
@@ -60,12 +52,38 @@ var GithubActivity = (function($, _) {
         var
             url = 'https://github.com/' + username + '.json?callback=?',
             template = $(tmpl_selector).html() || default_template,
-            compiled = _.template(template);
+            compiled = _.template(template),
+            current_date = '',
+            $current_list;
 
         $.getJSON(url, {}, function (data) {
             $.each(data.slice(0, 6), function(index, commit) {
-                $(selector).append(compiled(commit));
+                var date = commit.created_at.substring(0, 10);
+                if (date != current_date) {
+                    if (current_date) {
+                        var $new_item = $('<li class="date"></li>');
+                        $new_item.append('<h5>' + current_date + '</h5>');
+                        var $div = $('<div class="actions"></div>');
+                        $div.append($current_list);
+                        $new_item.append($div);
+                        $(selector).append($new_item);
+                    }
+
+                    $current_list = $('<ul></ul>');
+                    current_date = date;
+                }
+                var $action = $(compiled(commit));
+                if (index % 2) {
+                    $action.addClass('odd')
+                }
+                $current_list.append($action);
             });
+            var $new_item = $('<li class="date"></li>');
+            $new_item.append('<h5>' + current_date + '</h5>');
+            var $div = $('<div class="actions"></div>');
+            $div.append($current_list);
+            $new_item.append($div);
+            $(selector).append($new_item);
         });
     };
 

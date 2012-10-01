@@ -132,8 +132,70 @@ a:visited {
     margin           : 0px;
     padding          : 2px;
     font-size        : medium;
+    text-align       : center;
+}
+
+.github h5 {
+    background-color : #58a;
+    border           : 1px solid;
+    margin           : 8px 16px;
+    padding          : 2px;
+    font-size        : x-small;
+    text-align       : center;
+}
+
+.github .actions {
+    border : 1px solid;
+    float : left;
 }
 
 .github ul {
-    padding : 0px 16px;
+    padding : 0px;
+    list-style-type : none;
+}
+
+#github-activity {
+    padding : 0px;
+    margin : 0px;
+}
+
+.github li {
+    float : left;
+    width : 100%;
+}
+
+.github .action.odd {
+    background-color : #fff;
+}
+
+.github .action {
+    background-color : #ddd;
+    margin : 0px;
+    padding : 4px;
+    float : left;
+}
+
+.github .date ul {
+    margin-right : 8px;
+    clear : left;
+}
+
+.github dl {
+    margin : 4px 0px;
+}
+
+.github dt {
+    padding : 0px 8px;
+    float : left;
+    clear : left;
+    margin : 0px;
+    width : 3em;
+}
+
+.github dd {
+    float : left;
+    padding : 0px;
+    padding-left : 4px;
+    margin : 0px;
+    width : 176px;
 }
