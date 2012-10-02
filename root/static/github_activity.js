@@ -44,6 +44,11 @@ var GithubActivity = (function($, _) {
                 #<% print(url.replace(/.*\\/issues\\/(\\d+)#.*/, "$1")); %> \
                 </a> in <a href="<%= repository.url%>"> \
                 <%= repository.owner %>/<%= repository.name %></a> \
+            <% } else if (type == "ForkEvent") { %> \
+                <b>forked</b> <a href="<%= repository.url %>"> \
+                <%= repository.owner %>/<%= repository.name %></a> \
+                to <a href="<%= url %>"> \
+                <%= actor %>/<%= repository.name %></a> \
             <% } else { %> \
                 Unknown event type <% type %> \
             <% } %>\
