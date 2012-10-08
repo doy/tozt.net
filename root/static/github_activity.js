@@ -49,6 +49,12 @@ var GithubActivity = (function($, _) {
                 <%= repository.owner %>/<%= repository.name %></a> \
                 to <a href="<%= url %>"> \
                 <%= actor %>/<%= repository.name %></a> \
+            <% } else if (type == "GollumEvent") { %> \
+                <b><%= payload.pages[0].action %></b> the \
+                <a href="<%= url %>">"<%= payload.pages[0].page_name %>" \
+                wiki page</a> \
+                in <a href="<%= repository.url%>"> \
+                <%= repository.owner %>/<%= repository.name %></a> \
             <% } else { %> \
                 Unknown event type <% type %> \
             <% } %>\
