@@ -55,6 +55,9 @@ var GithubActivity = (function($, _) {
                 wiki page</a> \
                 in <a href="<%= repository.url%>"> \
                 <%= repository.owner %>/<%= repository.name %></a> \
+            <% } else if (type == "FollowEvent") { %> \
+                <b>started following</b> \
+                <a href="<%= url %>"><%= payload.target.login %></a> \
             <% } else { %> \
                 Unknown event type <% type %> \
             <% } %>\
