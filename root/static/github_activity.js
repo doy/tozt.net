@@ -42,12 +42,12 @@ var GithubActivity = (function($, _) {
             <% } else if (type == "IssueCommentEvent") { %> \
                 <b>commented on issue</b> <a href="<%= url %>"> \
                 #<% print(url.replace(/.*\\/issues\\/(\\d+)#.*/, "$1")); %> \
-                </a> in <a href="<%= repository.url%>"> \
+                </a> in <a href="<%= repository.url %>"> \
                 <%= repository.owner %>/<%= repository.name %></a> \
             <% } else if (type == "IssuesEvent") { %> \
                 <b><%= payload.action %> issue</b> <a href="<%= url %>"> \
-                #<% print(url.replace(/.*\\/issues\\/(\\d+)#.*/, "$1")); %> \
-                </a> in <a href="<%= repository.url%>"> \
+                #<% print(url.replace(/.*\\/issues\\/(\\d+)/, "$1")); %> \
+                </a> in <a href="<%= repository.url %>"> \
                 <%= repository.owner %>/<%= repository.name %></a> \
             <% } else if (type == "ForkEvent") { %> \
                 <b>forked</b> <a href="<%= repository.url %>"> \
