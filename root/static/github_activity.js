@@ -65,7 +65,8 @@ var GithubActivity = (function($, _) {
                 <a href="<%= url %>"><%= payload.target.login %></a> \
             <% } else if (type == "WatchEvent") { %> \
                 <b><%= payload.action %> watching</b> \
-                <a href="<%= url %>"><%= repository.name %></a> \
+                <a href="<%= url %>"> \
+                <%= repository.owner %>/<%= repository.name %></a> \
             <% } else { %> \
                 Unknown event type <% type %> \
             <% } %>\
