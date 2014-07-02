@@ -1,5 +1,6 @@
 <h4>talks i've given</h4>
 <ul>
+    <li><a href="http://www.yapcna.org/yn2014/talk/5360">YAPC::NA 2014 - Introduction to Rust</a> (<a href="http://youtu.be/5EFCMaEbgX4">video</a>, <a href="https://github.com/doy/intro-to-rust-yapc-na-2014/blob/master/talk.md">transcript</a>, <a href="https://github.com/doy/intro-to-rust-yapc-na-2014/tree/master/examples">slides/examples</a>)</li>
     <li><a href="http://act.yapc.eu/ye2012/talk/4181">YAPC::EU 2012 - Dependency Injection with Bread::Board</a> (<a href="http://youtu.be/Xpk7AV90gd8">video</a>, <a href="/talks/bread_board_yapc_eu_2012.pdf">slides</a>, <a href="/talks/bread_board_yapc_eu_2012.key">source</a>)</li>
     <li><a href="http://act.yapc.eu/ye2012/talk/4182">YAPC::EU 2012 - TIMTOWTDI in 2012</a></li>
     <li><a href="http://act.yapcna.org/2012/talk/147">YAPC::NA 2012 - Dependency Injection with Bread::Board</a> (<a href="http://youtu.be/DhhaOQWoOpw">video</a>, <a href="/talks/bread_board_yapc_na_2012/">slides</a>, <a href="/talks/bread_board_yapc_na_2012/slides.vroom">source</a>)</li>
