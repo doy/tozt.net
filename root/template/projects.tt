@@ -1,108 +1,140 @@
 <h4>projects i've worked on</h4>
+
+<h5>Termcast</h5>
 <ul>
-<li>
-    Termcast (<a href="https://github.com/doy/python-termcast-server">https://github.com/doy/python-termcast-server</a>)
-    <p>
-        Termcast is a program which allows users to stream the contents of
-        terminal-based programs to a central server, and allow other people to
-        watch them. It is useful for remote pair programming, as well as things
-        like spectating on terminal-based games. I have written a client which
-        allows users to broadcast, as well as a server which allows users to
-        watch the broadcasters either over an SSH connection or through a
-        website.
-    </p>
-</li>
-<li>
-    libvt100 (<a href="https://github.com/doy/libvt100">https://github.com/doy/libvt100</a>)
-    <p>
-        I am the author of libvt100, a terminal parsing library written in C
-        and Lex. I am currently using it in the Termcast server and in Runes, a
-        terminal emulator.
-    </p>
-</li>
-<li>
-    Text::Handlebars (<a href="https://github.com/doy/text-handlebars">https://github.com/doy/text-handlebars</a>)
-    <p>
-        I am the author of Text::Handlebars, a port of the Handlebars.js
-        templating language to Perl. It uses a custom parser on top of the
-        Xslate template engine framework. It supports nearly the entire feature
-        set of the JavaScript implementation, and we used it at Infinity
-        Interactive to ease the transition of one of our large web applications
-        from client side templates to server side templates.
-    </p>
-</li>
-<li>
-    Reply (<a href="https://github.com/doy/reply">https://github.com/doy/reply</a>)
-    <p>
-        I am the author of Reply, a customizable and lightweight REPL for Perl.
-        It provides features like pluggable tab completion, automatic class
-        loading and refreshing, history support, and (through the Carp::Reply
-        module) automatically launching a REPL when an exception is thrown. It
-        can be easily extended through a powerful plugin system.
-    </p>
-</li>
-<li>
-    Plack (<a href="http://plackperl.org/">http://plackperl.org/</a>)
-    <p>
-        I am a member of the core development team for Plack, the reference
-        implementation of the PSGI specification for Perl web
-        server/application interaction (similar to Python's WSGI and Ruby's
-        Rack). I have contributed to the design of PSGI, as well as
-        implementing my own PSGI-based web framework called OX.
-    </p>
-</li>
-<li>
-    Perl (<a href="http://www.perl.org/">http://www.perl.org/</a>)
-    <p>
-        I was the release manager for the 5.17.1 development release of Perl,
-        and I have also contributed many bug fixes to the Perl core. In
-        addition, I have been a lead developer on the p5-mop project, a
-        prototype of a new object system for Perl, including features like a
-        meta-object protocol.
-    </p>
-</li>
-<li>
-    OX (<a href="https://github.com/iinteractive/OX">https://github.com/iinteractive/OX</a>)
-    <p>
-        I am the lead author of OX, a web framework for Perl based on the PSGI
-        specification, which uses the Bread::Board dependency injection system
-        to manage application components. We have used it internally at
-        Infinity Interactive for many client projects. In addition to writing
-        most of the framework itself, I also wrote a series of advent calendar
-        posts documenting it, which can be seen at
-        \url{http://ox.iinteractive.com/advent/}.
-    </p>
-</li>
-<li>
-    Moose (<a href="http://moose.perl.org/">http://moose.perl.org/</a>)
-    <p>
-        I am a member of the lead development team for Moose, a module which
-        provides advanced object orientation capabilities for Perl. I was also
-        the release manager from 2011--2012. I wrote several extensions for
-        Moose, including MooseX::NonMoose, which allows classes built with
-        Moose to easily interoperate with other types of classes, and
-        MooseX::Aliases, which allows Moose attributes to be referred to by
-        different names.
-    </p>
-</li>
-<li>
-    TAEB (<a href="http://taeb.github.io/">http://taeb.github.io/</a>)
-    <p>
-        I am one of the lead framework developers for TAEB, a Perl framework
-        for programmatic interaction with NetHack. I am also the primary
-        developer for the leading AI written for TAEB. I developed several
-        standalone Perl modules, including Graph::Implicit, which implements
-        several useful graph algorithms, and IO::Pty::Easy, which provides a
-        simple read/write interface for interacting with pseudo terminals.
-    </p>
-</li>
-<li>
-    Dungeon Crawl Stone Soup (<a href="http://crawl.develz.org/">http://crawl.develz.org/</a>)
-    <p>
-        I am a member of the development team for Dungeon Crawl Stone Soup, a
-        roguelike game written in C++ and Lua. I contributed several features
-        throughout the game, and I was also the release manager for the 0.6
-        release.
-    </p>
-</li>
+    <li><a href="https://github.com/doy/python-termcast-server">Server Github page</a></li>
+    <li><a href="https://github.com/doy/python-termcast-client">Python client Github page</a></li>
+    <li><a href="https://github.com/doy/app-termcast">Perl client Github page</a></li>
+    <li><a href="https://metacpan.org/release/App-Termcast">Perl client CPAN page</a></li>
 </ul>
+<p>
+    Termcast is a program which allows users to stream the contents of
+    terminal-based programs to a central server, and allow other people to
+    watch them. It is useful for remote pair programming, as well as things
+    like spectating on terminal-based games. I have written a client which
+    allows users to broadcast, as well as a server which allows users to watch
+    the broadcasters either over an SSH connection or through a website.
+</p>
+
+<h5>libvt100</h5>
+<ul>
+    <li><a href="https://github.com/doy/libvt100">Github page</a></li>
+</ul>
+<p>
+    I am the author of libvt100, a terminal parsing library written in C and
+    Lex. I am currently using it in the Termcast server and in Runes, a
+    terminal emulator.
+</p>
+
+<h5>Dungeon Crawl Stone Soup</h5>
+<ul>
+    <li><a href="http://crawl.develz.org/">Website</a></li>
+    <li><a href="https://gitorious.org/crawl/crawl/">Gitorious repository</a></li>
+</ul>
+<p>
+    I am a member of the development team for Dungeon Crawl Stone Soup, a
+    roguelike game written in C++ and Lua. I contributed several features
+    throughout the game, and I was also the release manager for the 0.6
+    release.
+</p>
+
+<h5>Reply</h5>
+<ul>
+    <li><a href="https://github.com/doy/reply">Github repository</a></li>
+    <li><a href="https://metacpan.org/release/Reply">CPAN page</a></li>
+</ul>
+<p>
+    I am the author of Reply, a customizable and lightweight REPL for Perl.
+    It provides features like pluggable tab completion, automatic class
+    loading and refreshing, history support, and (through the Carp::Reply
+    module) automatically launching a REPL when an exception is thrown. It
+    can be easily extended through a powerful plugin system.
+</p>
+
+<h5>Plack</h5>
+<ul>
+    <li><a href="http://plackperl.org/">Website</a></li>
+    <li><a href="https://github.com/plack/Plack">Github repository</a></li>
+    <li><a href="https://metacpan.org/release/Plack">CPAN page</a></li>
+</ul>
+<p>
+    I am a member of the core development team for Plack, the reference
+    implementation of the PSGI specification for Perl web server/application
+    interaction (similar to Python's WSGI and Ruby's Rack). I have also
+    contributed to the design of PSGI.
+</p>
+
+<h5>Perl</h5>
+<ul>
+    <li><a href="http://www.perl.org/">Website</a></li>
+    <li><a href="http://perl5.git.perl.org/perl.git">Git repository</a></li>
+</ul>
+<p>
+    I was the release manager for the 5.17.1 development release of Perl, and I
+    have also contributed many bug fixes to the Perl core. In addition, I have
+    been a lead developer on the p5-mop project, a prototype of a new object
+    system for Perl, including features like a meta-object protocol.
+</p>
+
+<h5>Moose</h5>
+<ul>
+    <li><a href="http://moose.perl.org/">Website</a></li>
+    <li><a href="https://github.com/moose/Moose">Github page</a></li>
+    <li><a href="https://metacpan.org/release/Moose">CPAN page</a></li>
+</ul>
+<p>
+    I am a member of the development team for Moose, a module which provides
+    advanced object orientation capabilities for Perl. I was also the release
+    manager from 2011 &ndash; 2012. I am also the maintainer of several widely
+    used Moose extensions, such as MooseX::NonMoose and MooseX::Aliases.
+</p>
+
+<h5>Spreadsheet::ParseXLSX</h5>
+<ul>
+    <li><a href="https://github.com/doy/spreadsheet-parsexlsx">Github page</a></li>
+    <li><a href="https://metacpan.org/release/Spreadsheet-ParseXLSX">CPAN page</a></li>
+</ul>
+<p>
+    Spreadsheet::ParseXLSX is a Perl module which can read .xlsx files (as
+    generated by new versions of Microsoft Excel). It handles reading both the
+    data and formatting from these files.
+</p>
+
+<h5>Text::Handlebars</h5>
+<ul>
+    <li><a href="https://github.com/doy/text-handlebars">Github page</a></li>
+    <li><a href="https://metacpan.org/release/Text-Handlebars">CPAN page</a></li>
+</ul>
+<p>
+    Text::Handlebars is a port of the Handlebars.js templating language to
+    Perl. It uses a custom parser on top of the Xslate template engine
+    framework. It supports nearly the entire feature set of the JavaScript
+    implementation, and we used it at Infinity Interactive to ease the
+    transition of one of our large web applications from client side templates
+    to server side templates.
+</p>
+
+<h5>OX</h5>
+<ul>
+    <li><a href="https://github.com/iinteractive/OX">Github page</a></li>
+    <li><a href="https://metacpan.org/release/OX">CPAN page</a></li>
+    <li><a href="http://ox.iinteractive.com/advent/">Advent calendar</a></li>
+</ul>
+<p>
+    OX is a web framework for Perl based on the PSGI specification, which uses
+    the Bread::Board dependency injection system to manage application
+    components. We used it internally at Infinity Interactive for many client
+    projects.
+</p>
+
+<h5>TAEB</h5>
+<ul>
+    <li><a href="http://taeb.github.io/">Website</a></li>
+    <li><a href="https://github.com/TAEB/TAEB">Github page for the framework</a></li>
+    <li><a href="https://github.com/TAEB/TAEB-AI-Behavioral">Github page for the "Behavioral" AI</a></li>
+</ul>
+<p>
+    I am one of the lead framework developers for TAEB, a Perl framework for
+    programmatic interaction with NetHack. I am also the primary developer for
+    the leading AI written for TAEB.
+</p>
