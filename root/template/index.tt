@@ -7,7 +7,8 @@
 <ul id="pinboard-activity" class="sidebar-activity"></ul>
 </div>
 <h4>about me</h4>
-<p>I am a programmer, currently attending <a href="https://www.hackerschool.com/">Hacker School</a>.</p>
+<p>I am a programmer, currently working for <a href="https://stripe.com/">Stripe</a>.</p>
+<p>I was a member of the Fall 1 2014 batch at the <a href="https://www.recurse.com/">Recurse Center</a>.</p>
 <p>I typically go by "<a href="profiles.html">doy</a>" on the internet.</p>
 <p>I <a href="http://github.com/doy">write</a> <a href="https://metacpan.org/author/DOY">lots</a> <a href="http://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=gitmo/Moose.git;a=shortlog">of</a> <a href="https://gitorious.org/crawl/crawl/">code</a>, but there is also <a href="projects-todo.txt">a great deal of code that I haven't written yet</a>.</p>
 <p>I graduated from <a href="http://uiuc.edu/">the University of Illinois at Urbana-Champaign</a> in 2008, with a degree in computer science.</p>
